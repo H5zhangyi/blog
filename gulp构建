@@ -1,0 +1,96 @@
+gulp学习心得：(可供新手参考)
+
+1.全局安装gulp
+npm install --global gulp
+
+2. 作为项目的开发依赖（devDependencies）安装：(在项目根目录操作)
+npm install --save-dev gulp
+
+3.在项目根目录创建一个gulpfile.js文件（此文件名不可更改）
+
+4.初始化生成package.json (可以先用默认配置)
+npm init
+
+接下来就是安装各种组件了。。。
+  官网搜索安装就行
+
+gulp官网：http://www.gulpjs.com.cn/
+npm组件官网：https://www.npmjs.com/
+
+下面贴出一个常用的配置(仅供参考)：
+
+*************************************************************
+package.json
+*************************************************************
+
+{
+  "name": "qmcz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-less": "^3.1.0",
+    "gulp-uglify": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
+*************************************************************
+gulpfile.js
+*************************************************************
+
+var gulp = require('gulp');
+var less = require('gulp-less');  // less编译成css
+var autoprefixer = require('gulp-autoprefixer');  // 兼容代码自动补全
+var cleanCss = require('gulp-clean-css');  // css代码压缩
+var concat = require('gulp-concat');  // 代码合并
+var uglify = require('gulp-uglify');  // js代码压缩
+var connect = require('gulp-connect'); // 构建本地服务
+
+gulp.task('less',function(){
+	gulp.src(['view/*.less'])
+		.pipe(less())
+		.pipe(autoprefixer({
+			browsers: ['last 20 versions'],
+			cascade: true
+		}))
+		.pipe(cleanCss())
+		.pipe(concat('index.min.css'))
+		.pipe(gulp.dest(''))
+});
+
+gulp.task('js',function(){
+	gulp.src('index.js')
+		.pipe(uglify())
+		.pipe(concat('index.min.js'))
+		.pipe(gulp.dest(''))
+});
+
+gulp.task('mywatch',function(){
+	// gulp.watch('view/*.less').on('change',function(e){
+	// 	console.log("less编译"+e.path);
+	// });
+	gulp.watch(['view/*.less'],['less']);
+	gulp.watch(['index.js'],['js']);
+});
+
+gulp.task('localhost',function(){
+	connect.server({
+		root: '',  //静态资源目录
+		port: 8000
+	});
+});
+
+gulp.task('default',['mywatch','localhost']);
