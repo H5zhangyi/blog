@@ -72,7 +72,7 @@ gulp.task('less',function(){
 });
 
 gulp.task('js',function(){
-	gulp.src('index.js')
+	gulp.src(['config/config.js','controller/*Controller'])
 		.pipe(uglify())
 		.pipe(concat('index.min.js'))
 		.pipe(gulp.dest(''))
@@ -83,7 +83,7 @@ gulp.task('mywatch',function(){
 	// 	console.log("less编译"+e.path);
 	// });
 	gulp.watch(['view/*.less'],['less']);
-	gulp.watch(['index.js'],['js']);
+	gulp.watch(['config/config.js','controller/*Controller'],['js']);
 });
 
 gulp.task('localhost',function(){
