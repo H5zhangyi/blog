@@ -46,8 +46,8 @@ if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
   sublimecodeintel 代码自动补全(在某类型代码环境下，html,css,js等)
   emmet 快速的html/css编写神器
 HTML文档需要包含一些固定的标签，比如<html>、<head>、<body>等，
-  现在1秒钟就可以输入这些标签：比如输入“!”或“html:5”，然后按ctrl+E键;输入标签元素，按Ctrl+E或者tab，即可产生这一对标签。如：输入style,在emmet语法最后按下Ctrl+E或者tab，即可得到  
-连续输入元素名称和ID，Emmet会自动为你补全，比如输入p#foo
+  现在1秒钟就可以输入这些标签：比如输入“!”或“html:5”，然后按ctrl+E键;输入标签元素，按Ctrl+E或者tab，即可产生这一对标签。
+  如：输入style,在emmet语法最后按下Ctrl+E或者tab，即可得到  连续输入元素名称和ID，Emmet会自动为你补全，比如输入p#foo
  
      Emmet更多用法：
      http://www.open-open.com/lib/view/open1451954899292.html
