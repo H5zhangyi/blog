@@ -33,11 +33,17 @@ package.json
   },
   "devDependencies": {
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^2.0.13",
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^5.0.0",
+    "gulp-inject": "^4.1.0",
     "gulp-less": "^3.1.0",
-    "gulp-uglify": "^2.0.0"
+    "gulp-manifest": "^0.1.1",
+    "gulp-rev": "^7.1.2",
+    "gulp-sequence": "^0.4.6",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -46,21 +52,28 @@ package.json
   "license": "ISC"
 }
 
-
 *************************************************************
 gulpfile.js
 *************************************************************
 
-var gulp = require('gulp');
+var gulp = require('gulp');  // 基础库
 var less = require('gulp-less');  // less编译成css
 var autoprefixer = require('gulp-autoprefixer');  // 兼容代码自动补全
 var cleanCss = require('gulp-clean-css');  // css代码压缩
 var concat = require('gulp-concat');  // 代码合并
 var uglify = require('gulp-uglify');  // js代码压缩
+var watch = require('gulp-watch');  // 监听
 var connect = require('gulp-connect'); // 构建本地服务
 
+// 解决浏览器缓存问题，增强用户体验
+var rev = require('gulp-rev');  // 以md5方法重命名文件
+var manifest = require('gulp-manifest'); // 用json文件保存文件名
+var inject = require('gulp-inject'); // 更换html文件引用路径
+var clean = require('gulp-clean');  // 删除文件
+var sequence = require('gulp-sequence'); // 保证文件执行顺序
+
 gulp.task('less',function(){
-	gulp.src(['view/*.less'])
+	return gulp.src(['view/*.less'])
 		.pipe(less())
 		.pipe(autoprefixer({
 			browsers: ['last 20 versions'],
@@ -72,7 +85,7 @@ gulp.task('less',function(){
 });
 
 gulp.task('js',function(){
-	gulp.src(['config/config.js','controller/*Controller'])
+	return gulp.src(['config/config.js','controller/*Controller.js'])
 		.pipe(uglify())
 		.pipe(concat('index.min.js'))
 		.pipe(gulp.dest(''))
@@ -83,14 +96,38 @@ gulp.task('mywatch',function(){
 	// 	console.log("less编译"+e.path);
 	// });
 	gulp.watch(['view/*.less'],['less']);
-	gulp.watch(['config/config.js','controller/*Controller'],['js']);
+	gulp.watch(['config/config.js','controller/*Controller.js'],['js']);
 });
 
 gulp.task('localhost',function(){
-	connect.server({
+	return connect.server({
 		root: '',  //静态资源目录
 		port: 8000
 	});
 });
 
-gulp.task('default',['mywatch','localhost']);
+// 解决浏览器缓存
+gulp.task('rev',function(){
+	return gulp.src(['index.min.css','index.min.js'])
+		.pipe(rev())
+		.pipe(gulp.dest(''))
+		.pipe(rev.manifest())
+		.pipe(gulp.dest('data/'));
+});
+
+gulp.task('inject',function(){
+	return gulp.src('index.html')
+		.pipe( inject( gulp.src(['index-*.min.css','index-*.min.js']) ))
+		.pipe( gulp.dest('') );
+});
+
+gulp.task('clean',function(){
+	return gulp.src('index-*.min.*')
+		.pipe( clean());
+});
+
+gulp.task('build',function(cb){
+	return sequence('clean','rev','inject',cb);
+});
+
+gulp.task('default',['mywatch','localhost','build']);
