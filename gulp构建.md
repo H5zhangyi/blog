@@ -1,15 +1,15 @@
 gulp学习心得：(可供新手参考)
 ========================
 
-#1.全局安装gulp
+###1.全局安装gulp
 npm install --global gulp
 
-#2. 作为项目的开发依赖（devDependencies）安装：(在项目根目录操作)
+###2. 作为项目的开发依赖（devDependencies）安装：(在项目根目录操作)
 npm install --save-dev gulp
 
-#3.在项目根目录创建一个gulpfile.js文件（此文件名不可更改）
+###3.在项目根目录创建一个gulpfile.js文件（此文件名不可更改）
 
-#4.初始化生成package.json (可以先用默认配置)
+###4.初始化生成package.json (可以先用默认配置)
 npm init
 
 接下来就是安装各种组件了。。。
