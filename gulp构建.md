@@ -28,7 +28,7 @@ npm组件官网：https://www.npmjs.com/
 
 >package.json
 
-```
+```json
 {
   "name": "qmcz",
   "version": "1.0.0",
