@@ -87,14 +87,15 @@ gulp.task('less',function(){
 		}))
 		.pipe(cleanCss())
 		.pipe(concat('index.min.css'))
-		.pipe(gulp.dest(''))
+		.pipe(gulp.dest('dist/'))
 });
+
 
 gulp.task('js',function(){
 	return gulp.src(['config/config.js','controller/*Controller.js'])
 		.pipe(uglify())
 		.pipe(concat('index.min.js'))
-		.pipe(gulp.dest(''))
+		.pipe(gulp.dest('dist/'))
 });
 
 gulp.task('mywatch',function(){
@@ -112,23 +113,23 @@ gulp.task('localhost',function(){
 	});
 });
 
-// 解决浏览器缓存(开发阶段可暂时不用)
+// 解决浏览器缓存
 gulp.task('rev',function(){
-	return gulp.src(['index.min.css','index.min.js'])
+	return gulp.src(['dist/index.min.css','dist/index.min.js'])
 		.pipe(rev())
-		.pipe(gulp.dest(''))
+		.pipe(gulp.dest('dist/'))
 		.pipe(rev.manifest())
-		.pipe(gulp.dest('data/'));
+		.pipe(gulp.dest('dist/'));
 });
 
 gulp.task('inject',function(){
 	return gulp.src('index.html')
-		.pipe( inject( gulp.src(['index-*.min.css','index-*.min.js']) ))
+		.pipe( inject( gulp.src(['dist/index-*.min.css','dist/index-*.min.js']) ))
 		.pipe( gulp.dest('') );
 });
 
 gulp.task('clean',function(){
-	return gulp.src('index-*.min.*')
+	return gulp.src('dist/index-*.min.*')
 		.pipe( clean());
 });
 
@@ -136,5 +137,6 @@ gulp.task('build',function(cb){
 	return sequence('clean','rev','inject',cb);
 });
 
-gulp.task('default',['mywatch','localhost','build']);
+gulp.task('default',['mywatch','localhost']);
+
 ```
