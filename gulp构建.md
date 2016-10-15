@@ -61,7 +61,7 @@ npm组件官网：https://www.npmjs.com/
 
 >gulpfile.js
 
-```
+```javascript
 var gulp = require('gulp');  // 基础库
 var less = require('gulp-less');  // less编译成css
 var autoprefixer = require('gulp-autoprefixer');  // 兼容代码自动补全
