@@ -1,4 +1,4 @@
-	#es6基础入门
+###es6基础入门
 ```javascript
 // var a = [];
 		// for(var i=0; i<10; i++){
