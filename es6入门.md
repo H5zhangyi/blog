@@ -55,4 +55,4 @@
 			console.log('reject');
 		});
 		console.log('Hi');
-    ```
+```
