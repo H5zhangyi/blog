@@ -75,6 +75,22 @@ HTML文档需要包含一些固定的标签，比如<html>、<head>、<body>等�
     aligments   对齐：key-bindings:{"keys": ["ctrl+alt+f"],"command":"alignment"}
     BracketHighlighter 代码高亮
     Color Highlighter它可以展示你所选择的颜色代码的真正颜色。同时包含一个颜色选择器让你可以方便地更改颜色。
+  
+  sublime F12预览：preference -> key Bindings 更改路径为谷歌安装地址（如下）
+[
+ { "keys": ["f12"], "command": "side_bar_files_open_with",
+"args": {
+"paths": [],
+"application": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+"extensions":".*" //any file with extension
+} },
+{ "keys": ["ctrl+f12"], "command": "side_bar_files_open_with",
+"args": {
+"paths": [],
+"application": "D:\\firefox.exe",
+"extensions":".html" //any file with extension
+} },
+]
     
 packagecontrol插件官网：https://packagecontrol.io/ 
 
