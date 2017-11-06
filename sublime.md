@@ -2,7 +2,8 @@
 > 官网下载地址: [https://www.sublimetext.com/3](https://www.sublimetext.com/3)
 ### 软件破解
 选项 help -> license (输入注册码，可以一行一行粘贴)
-     —– BEGIN LICENSE —–
+
+    —– BEGIN LICENSE —–
     Michael Barnes
     Single User License
     EA7E-821385
@@ -15,6 +16,7 @@
     200C25BE DBBC4855 C4CFB774 C5EC138C
     0FEC1CEF D9DCECEC D3A5DAD1 01316C36
     —— END LICENSE ——
+
 > [备用注册码](http://blog.sina.com.cn/s/blog_68e267e10102v76h.html)
 ### 安装package control（https://packagecontrol.io/ ）
 
@@ -22,6 +24,7 @@
 
 1. 通过快捷键 ctrl+` 或者 View > Show Console 菜单打开控制台。
 2. 粘贴如下代码（https://packagecontrol.io/installation）：
+
     import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88';
     pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); 
     urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) );
