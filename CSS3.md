@@ -1,4 +1,4 @@
-###transform: 2d变换
+### transform: 2d变换
     transform(x,y) 平移
     scale(2,2) 缩放
     rotate(45deg) 旋转
@@ -7,14 +7,14 @@
     tansform-origin: 0px 0px; // 旋转坐标
     transition: all 1s linear;  // 过渡
 ```
-###background: linear-gradient(to right,red,yellow)
+### background: linear-gradient(to right,red,yellow)
 ```
                 线性渐变        (to right,green 0%,yellow 20%,red 50%)
                                (to right,rgba(255,0,0,0),rgba(255,0,0,1)
                 radial-gradient(0px 100px,yellow,green,red)
                   径向渐变          坐标
 ```
-###box-shadow(0px  0px  0px  5px  red) 外阴影 
+### box-shadow(0px  0px  0px  5px  red) 外阴影 
 ```
               x偏移 y偏移 模糊半径 向外扩展 颜色
               .........................inset  内阴影
