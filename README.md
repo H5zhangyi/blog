@@ -8,7 +8,7 @@
 
 ### 第一部分
 
-- [Sublime Text3安装破解](./Sublime Text3安装破解.md)
+- [Sublime Text3安装破解](./sublime.md)
 - [字体Rem使用方法](./字体rem.md)
 - [CSS3基础特性](./CSS3.md)
 - [GIT常用命令](./GIT常用命令.md)
