@@ -12,3 +12,7 @@
 - [字体Rem使用方法](./基础/字体rem.md)
 - [CSS3基础特性](./基础/CSS3.md)
 - [GIT常用命令](./基础/GIT常用命令.md)
+
+### 第二部分(进阶)
+
+- [七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/)
