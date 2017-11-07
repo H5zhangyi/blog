@@ -8,7 +8,7 @@
 ### 第一部分(基础入门)
 
 - [Sublime Text3安装破解](./基础/sublime.md)
-- [markdown简介](https://zy1024.github.io/markdown/)
+- [markdown简介](https://zy1024.github.io/Markdown/)
 - [字体Rem使用方法](./基础/字体rem.md)
 - [CSS3基础特性](./基础/CSS3.md)
 - [GIT常用命令](./基础/GIT常用命令.md)
