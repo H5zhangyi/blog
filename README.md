@@ -5,9 +5,10 @@
 	
 	—— 约翰卡马克
 
-### 第一部分
+### 第一部分(基础入门)
 
-- [Sublime Text3安装破解](./sublime.md)
-- [字体Rem使用方法](./字体rem.md)
-- [CSS3基础特性](./CSS3.md)
-- [GIT常用命令](./GIT常用命令.md)
+- [Sublime Text3安装破解](./基础/sublime.md)
+- [markdown简介](./基础/markdown简介.md)
+- [字体Rem使用方法](./基础/字体rem.md)
+- [CSS3基础特性](./基础/CSS3.md)
+- [GIT常用命令](./基础/GIT常用命令.md)
