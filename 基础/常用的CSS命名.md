@@ -1,6 +1,6 @@
 ﻿# 常用的CSS命名
 
-### CSS样式表文件命名
+### 一、CSS样式表文件命名
 
 - 基本共用 global.css   base.css
 - 主页面 index.css
@@ -12,7 +12,7 @@
 - 表单 forms.css 
 - 打印 print.css
 
-### 通用类
+### 二、通用类
 
 - 头：header 
 - 内容：content/container 
@@ -50,9 +50,8 @@
 - 状态：status 
 - 投票：vote 
 - 合作伙伴：partner
-- 注释的写法:
 
-### 页面结构
+### 三、页面结构
 1. 主体
     - 容器: container 
     - 页头：header 
