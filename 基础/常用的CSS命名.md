@@ -2,15 +2,15 @@
 
 ### CSS样式表文件命名
 
-基本共用 global.css   base.css
-主页面 index.css
-子页面 sub.css 
-模块 module.css
-主题 themes.css 
-专栏 columns.css 
-文字 font.css 
-表单 forms.css 
-打印 print.css
+- 基本共用 global.css   base.css
+- 主页面 index.css
+- 子页面 sub.css 
+- 模块 module.css
+- 主题 themes.css 
+- 专栏 columns.css 
+- 文字 font.css 
+- 表单 forms.css 
+- 打印 print.css
 
 ### 通用类
 
@@ -54,16 +54,16 @@
 
 ### 页面结构
 1. 主体
-    容器: container 
-    页头：header 
-    内容：content/container 
-    页面主体：main 
-    页尾：footer 
-    导航：nav 
-    侧栏：sidebar 
-    栏目：column 
-    页面外围控制整体佈局宽度：wrapper 
-    左右中：left right center
+    - 容器: container 
+    - 页头：header 
+    - 内容：content/container 
+    - 页面主体：main 
+    - 页尾：footer 
+    - 导航：nav 
+    - 侧栏：sidebar 
+    - 栏目：column 
+    - 页面外围控制整体佈局宽度：wrapper 
+    - 左右中：left right center
 2. 导航
     导航：nav 
     主导航：mainnav 
