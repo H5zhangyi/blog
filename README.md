@@ -12,6 +12,7 @@
 - [字体Rem使用方法](./基础/字体rem.md)
 - [CSS3基础特性](./基础/CSS3.md)
 - [GIT常用命令](./基础/GIT常用命令.md)
+- [常用的CSS命名](./基础/常用的CSS命名.md)
 - [JaneShop布局网页Demo](https://github.com/zy1024/JaneShop)
 
 ### 第二部分(进阶)
