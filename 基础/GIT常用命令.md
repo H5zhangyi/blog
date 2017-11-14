@@ -1,6 +1,8 @@
 # GIT常用命令
+
 ## 远程仓库
-1.git clone http://git.firstshare.cn/fe/\*.git 克隆远程仓库到本地  
+
+1.git clone http://git.firstshare.cn/fe/\*.git 克隆远程仓库到本地 
 2.git clone http://git.firstshare.cn/fe-h5/\*.git --recursive 克隆远程仓库到本地，同时递归克隆引用的子模块  
 3.git init 将本地目录初始化为git版本控制，会自动创建.git目录  
 4.git remote add origin http://git.firstshare.cn/fe/\*.git 将第3条初始化的目录，与远程仓库关联，此后即可推送代码到远程仓库  
@@ -8,6 +10,7 @@
 6.git push -u origin master 第一次推送，需要通过-u输入用户名和密码  
 
 ## 分支
+
 1.git branch 查看本地分支  
 2.git branch -r 查看远程分支  
 3.git branch -a 查看所有分支（包括本地分支和远程分支）  

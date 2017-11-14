@@ -1,10 +1,29 @@
 # H5-WebApp 自适应方案  - rem
->对于WebApp来说，为了更通用地满足各机型屏幕的自适应布局要求，我们目前采用rem布局方案。
+
+> 对于WebApp来说，为了更通用地满足各机型屏幕的自适应布局要求，我们目前采用rem布局方案。
 
 ## rem
->rem是相对于根元素(html)字体大小的单位，它只是一种相对单位。不同于另一个相对单位em，em是相对于父元素的字体大小，而rem则相对于根元素(html)，与父元素的字体大小无关。
+> rem是相对于根元素(html)字体大小的单位，它只是一种相对单位。不同于另一个相对单位em，em是相对于父元素的字体大小，而rem则相对于根元素(html)，与父元素的字体大小无关。
+
+### 简易使用
+
+```javascript
+
+    window.onresize = function(){  
+        RootSize();  
+    }  
+    function RootSize(){  
+        var docWidth=document.documentElement.clientWidth;  
+        var objHtml = document.getElementsByTagName('html')[0];  
+        objHtml.style.fontSize=docWidth/7.5+'px';  
+    }     
+    RootSize(); 
+
+```
+
 
 ## 等比例适配所有屏幕
+
 不论传统的px绝对像素布局，还是流式布局、固定宽度和响应式做法，都有其缺陷，并不能完全做到自适应所有屏幕。
 
 但是，rem方案可以比较容易地做到等比例适配所有屏幕，保证各屏幕的显示效果与原始设计稿一致。
@@ -13,6 +32,7 @@
 
 举个例子：（图片来自网络）
 
+```css
     html{
         font-size: 20px;
     }
@@ -28,6 +48,7 @@
         text-decoration: none;
         text-align: center;    
     }
+```
 
 上面代码结果如下图：
 
