@@ -8,6 +8,7 @@
 ### 第一部分(基础入门)
 
 - [Sublime Text3安装破解](./基础/sublime.md)
+- [使用PhotoShop切图](./基础/photoshop.md)
 - [字体Rem使用方法](./基础/字体rem.md)
 - [HTML5相关特性](./基础/HTML5.md)
 - [JS操作时间](./基础/date.md)
