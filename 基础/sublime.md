@@ -96,3 +96,9 @@
     npm install less-plugin-clean-css
 
 > ps：插件安装完成重启sublime才会生效
+
+
+### 将.md文件转换成.html文件
+
+    npm install -g i5ting_toc //在npm命令窗口全局下载i5ting_toc
+    i5ting_toc -f 文件名.md // 在md文档路径下开启npm命令窗口，输入命令，就可以转换了
