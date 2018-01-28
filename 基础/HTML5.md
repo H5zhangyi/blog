@@ -16,7 +16,7 @@
 
 ### transform: 2d变换
 
-    transform(x,y) 平移
+    translate(x,y) 平移
     scale(2,2) 缩放
     rotate(45deg) 旋转
     skew(30deg,30deg) 倾斜
