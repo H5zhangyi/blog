@@ -128,7 +128,7 @@
 - 语言类：cn, en
 - 论坛类：forum, bbs, topic, post
 - 方向类：up, down, left, right
-- 其他语义类：btn, close, ok, cancel, switch; link, title, info, intro, more, icon; form, label, search, contact, phone, date, email, user; view, loading...
+- 其他语义类：btn, close, ok, cancel, switch, link, title, info, intro, more, icon; form, label, search, contact, phone, date, email, user; view, loading...
 
 有了关键词之后，我们先来制定一些简单的规则
 
@@ -143,8 +143,5 @@
 - 不要超过四个class组合使用，如.a.b.c.d
 
 关键词及规则都有了，就剩实战操作啦。
-
-
-原文作者：结一
 
 转载自：http://www.w3cplus.com/css/css-class-name.html
