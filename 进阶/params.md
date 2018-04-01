@@ -1,6 +1,6 @@
 ### Form提交参数处理
 
-```
+```javascript
 // 封装jQuery插件
 $.prototype.serializeObject = function() {
     var a, o, h, i, e;
